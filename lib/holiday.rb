@@ -81,6 +81,7 @@ def all_supplies_in_holidays(holiday_hash)
     season_hash.each do |holiday_name, supply_array|
       holiday_ary = holiday_name.to_s.split('_')
         cap_holiday_ary = holiday_ary.map {|word| word.capitalize}
+binding.pry
         cap_holiday_ary.join(" ")
           # cap_holiday_ary << word.capitalize!
 #
