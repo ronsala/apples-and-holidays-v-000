@@ -1,21 +1,21 @@
 require 'pry'
 
-holiday_hash =
-  {
-    :winter => {
-      :christmas => ["Lights", "Wreath"],
-      :new_years => ["Party Hats"]
-    },
-    :summer => {
-      :fourth_of_july => ["Fireworks", "BBQ"]
-    },
-    :fall => {
-      :thanksgiving => ["Turkey"]
-    },
-    :spring => {
-      :memorial_day => ["BBQ"]
-    }
-  }
+# holiday_hash =
+#   {
+#     :winter => {
+#       :christmas => ["Lights", "Wreath"],
+#       :new_years => ["Party Hats"]
+#     },
+#     :summer => {
+#       :fourth_of_july => ["Fireworks", "BBQ"]
+#     },
+#     :fall => {
+#       :thanksgiving => ["Turkey"]
+#     },
+#     :spring => {
+#       :memorial_day => ["BBQ"]
+#     }
+#   }
 
 def second_supply_for_fourth_of_july(holiday_hash)
   # given that holiday_hash looks like this:
@@ -81,6 +81,7 @@ def all_supplies_in_holidays(holiday_hash)
     season_hash.each do |holiday_name, supply_array|
       holiday_ary = holiday_name.to_s.split('_')
         holiday_ary.each do |word|
+                binding.pry
           cap_holiday_ary << word.capitalize!
         holiday_str = cap_holiday_ary.join(" ")
         supply_str = supply_array.join(", ")
